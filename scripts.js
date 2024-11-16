@@ -5,9 +5,7 @@ var typed = new Typed(".typewriter-text",
 
             " Designer",
 
-            "Freelancer",
-            
-            "Youtuber"
+            "Machine Learning",    
         ],
         typeSpeed: 100,
         backSpeed: 70,
