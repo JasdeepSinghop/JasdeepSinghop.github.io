@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasdeep</title>
+    <link rel="stylesheet" href="project.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html#home" class="logo"> J<span>S</span> </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Skills</a>
+        <a href="index.html#education">Education</a>
+        <a href="Certificates.html">Certificates</a>>
+      </nav>
+    </header>
+
+    <script>
+      // Menu toggle functionality
+      let menuIcon = document.querySelector('#menu-icon');
+      let navbar = document.querySelector('.navbar');
+
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+      };
+
+      // Scroll and active link functionality
+      let sections = document.querySelectorAll('section');
+      let navLinks = document.querySelectorAll('.header nav a');
+
+      window.onscroll = () => {
+        sections.forEach(sec => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 150;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute('id');
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              document.querySelector('.header nav a[href*=' + id + ']').classList.add('active');
+            });
+          }
+        });
+      };
+    </script>
+
+    <section class="certificates" id="certificates">
+      <div class="certificates-content">
+        <h2 class="heading">WEB & ML <span>Projects</span></h2>
+        <br>
+        <div class="certificates-grid">
+          <!-- Example certificate card -->
+
+          <div class="certificate-card">
+            <img src="swiggy.png" alt="Certificate 1" />
+          </a>
+          <div class="certificate-info">
+            <h3 id="h3-size">Swiggy Clone</h3>
+            <p>Swiggy Clone by using swiggy's live api</p>
+            <br>
+            <a href=https://github.com/JasdeepSinghop/Swiggy_Clone class="btn">Github</a>
+            <a href=https://unique-dragon-d6d7cc.netlify.app/ class="btn">Run</a>
+            <p></p>
+          </div>
+        </div>
+
+          <div class="certificate-card">
+              <img src="spotify.png" alt="Certificate 1" />
+            </a>
+            <div class="certificate-info">
+              <h3 id="h3-size">Spotify Clone</h3>
+              <p>Spotify Clone using HTML,CSS,JS</p>
+              <br>
+              <a href="https://github.com/JasdeepSinghop/Spotify_Clone" class="btn">Github</a>
+              <a href="https://gemini-harpreet.streamlit.app/" class="btn">Run</a>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="certificate-card">
+              <img src="iris.jpg" alt="Certificate 1" />
+            </a>
+            <div class="certificate-info">
+              <h3 id="h3-size">ML Prjoect</h3>
+              <p>Iris Flower detection ML project . It detect which kind of iris flower based on patel lengths and width</p>
+              <br>
+              <a href="https://github.com/JasdeepSinghop/IRIS_FLOWER" class="btn">Github</a>
+              <!-- <a href="https://gemini-harpreet.streamlit.app/" class="btn">Run</a> -->
+              <p></p>
+            </div>
+          </div>
+
+          <div class="certificate-card">
+              <img src="placement.png" alt="Certificate 1" />
+            </a>
+            <div class="certificate-info">
+              <h3 id="h3-size">ML Prjoect</h3>
+              <p>Campus Placement detection based on percentage</p>
+              <br>
+              <a href="https://github.com/JasdeepSinghop/CampusPlacement" class="btn">Github</a>
+              <!-- <a href="https://gemini-harpreet.streamlit.app/" class="btn">Run</a> -->
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Add more Projects cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/jasdeep-singh-509898268/"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://github.com/JasdeepSinghop" target="_blank"><i class="bx bxl-github"></i></a>
+        <!-- <a href="mailto:hs2882003@gmail.com" target="_top"><i class="bx bx-envelope"></i></a> -->
+      </div>
+
+      <ul class="list">
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="index.html#services">Skills</a></li>
+      </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
